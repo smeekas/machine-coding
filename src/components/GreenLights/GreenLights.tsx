@@ -1,85 +1,50 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import Box from "./Box";
 import styles from "./GreenLights.module.css";
-type BoxStates = "active" | "InActive";
-type BoxItem = {
-  active: BoxStates;
-  id: string;
-  display: boolean;
-};
-const DoNotDisplay = new Set();
-DoNotDisplay.add(4);
-DoNotDisplay.add(5);
-DoNotDisplay.add(8);
-DoNotDisplay.add(10);
-DoNotDisplay.add(11);
-DoNotDisplay.add(13);
-DoNotDisplay.add(14);
-
-
-
 
 function GreenLights() {
-  const [boxList, setBoxList] = useState<BoxItem[]>(() => {
-    return Array(15)
-      .fill(0)
-      .map((_, index) => {
-        return {
-          active: "InActive",
-          id: index,
-          display: !DoNotDisplay.has(index),
-        };
-      });
-  });
+  const boxes = [
+    [1, 1, 1, 1],
+    [1, 0, 0, 1],
+    [1, 1, 1, 1],
+  ];
+  const boxList = boxes.flat(1);
+  const totalBoxes = boxList.filter((boxItem) => boxItem === 1).length;
   const [trackList, setTrackList] = useState<number[]>([]);
-  const total = boxList.length - DoNotDisplay.size;
-  const totalActive = boxList.filter(
-    (boxItem) => boxItem.active === "active"
-  ).length;
   const reverseBoxes = () => {
     const interval = setInterval(() => {
-      if (trackList.length > 0) {
-        const newBoxList = [...boxList];
-        newBoxList[trackList[0]].active = "InActive";
-        setBoxList(newBoxList);
-        const newTrackList = trackList;
-        newTrackList.shift();
-        setTrackList(newTrackList);
-      } else {
-        clearInterval(interval);
-      }
+      setTrackList((prev) => {
+        if (prev.length > 0) {
+          const newArr = prev.slice(1);
+          return newArr;
+        } else {
+          clearInterval(interval);
+        }
+        return prev;
+      });
     }, 1000);
   };
   const activateBox = (index: number) => {
-    console.log(index);
-    setTrackList((prev) => {
-      const newArr = [...prev];
-      newArr.unshift(index);
-      return newArr;
-    });
-    setBoxList((prev) => {
-      const newArr = [...prev];
-      newArr[index].active = "active";
-      return newArr;
-    });
-  };
-  useEffect(() => {
-    if (total === totalActive) {
+    const newArr = [index, ...trackList];
+    setTrackList(newArr);
+    if (newArr.length === totalBoxes) {
       reverseBoxes();
     }
-  }, [total, totalActive]);
+  };
+
   return (
-    <div className={styles.boxGrid}>
-      {boxList.map((boxItem, index) => {
+    <div
+      className={styles.boxGrid}
+      style={{ gridTemplateColumns: `repeat(${boxes[0].length},1fr)` }}
+    >
+      {boxes.flat(1).map((_, index) => {
         return (
-          <>
-            <Box
-              onClick={() => activateBox(index)}
-              key={index}
-              isActive={boxItem.active === "active"}
-              shouldDisplay={!DoNotDisplay.has(boxItem.id)}
-            />
-          </>
+          <Box
+            onClick={() => activateBox(index)}
+            key={index}
+            isActive={trackList.includes(index)}
+            shouldDisplay={boxList[index] === 1}
+          />
         );
       })}
     </div>
