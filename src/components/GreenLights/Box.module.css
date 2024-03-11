@@ -1,0 +1,16 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: beige;
+  border: 1px solid black;
+  margin: 8px;
+}
+
+.active {
+  background-color: green;
+}
+
+.hide {
+  /* display: none; */
+  visibility: hidden;
+}
