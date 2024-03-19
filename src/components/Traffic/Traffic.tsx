@@ -5,46 +5,61 @@ const config = {
   red: { time: 4, color: "red", order: 1 },
   yellow: { time: 2, color: "yellow", order: 2 },
   green: { time: 4, color: "green", order: 3 },
+
 } as const;
 type ConfigKeys = keyof typeof config;
 
 function Traffic() {
   const lightKeys = Object.keys(config);
+  const orderOfLight = lightKeys.sort((lightA, lightB) => {
+    return (
+      config[lightA as ConfigKeys].order - config[lightB as ConfigKeys].order
+    );
+  });
 
-  const [activeKey, setActiveKey] = useState<ConfigKeys | null>(null);
+  const [activeKey, setActiveKey] = useState<number | null>(null);
 
   const startHandler = () => {
-    setActiveKey("red");
+    setActiveKey(0);
   };
   const stopHandler = () => {
     setActiveKey(null);
   };
   useEffect(() => {
-    if (activeKey) {
-      if (activeKey === "red") {
-        setTimeout(() => {
-          setActiveKey("yellow");
-        }, config[activeKey].time * 1000);
-      } else if (activeKey === "yellow") {
-        setTimeout(() => {
-          setActiveKey("green");
-        }, config[activeKey].time * 1000);
-      } else {
-        setTimeout(() => {
-          setActiveKey("red");
-        }, config[activeKey].time * 1000);
-      }
+    if (activeKey !== null) {
+      const configData = config[orderOfLight[activeKey] as ConfigKeys];
+
+      setTimeout(() => {
+        setActiveKey((prev) => {
+          if (prev !== null) return (prev + 1) % orderOfLight.length;
+          return prev;
+        });
+      }, configData.time * 1000);
+      //   if (activeKey === "red") {
+      //     setTimeout(() => {
+      //       setActiveKey("yellow");
+      //     }, config[activeKey].time * 1000);
+      //   } else if (activeKey === "yellow") {
+      //     setTimeout(() => {
+      //       setActiveKey("green");
+      //     }, config[activeKey].time * 1000);
+      //   } else {
+      //     setTimeout(() => {
+      //       setActiveKey("red");
+      //     }, config[activeKey].time * 1000);
+      //   }
     }
-  }, [activeKey]);
+  }, [activeKey, orderOfLight]);
   return (
     <div>
       <div>
-        {lightKeys.map((lightItem) => {
+        {orderOfLight.map((lightItem, index) => {
           const lightValue = config[lightItem as ConfigKeys];
           return (
             <SingleLight
+              key={lightItem}
               color={lightValue.color}
-              isActive={lightItem === activeKey}
+              isActive={index === activeKey}
             />
           );
         })}
