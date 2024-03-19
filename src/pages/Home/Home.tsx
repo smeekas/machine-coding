@@ -12,6 +12,9 @@ function Home() {
         <li>
           <Link to="/progress">Progess</Link>
         </li>
+        <li>
+          <Link to="/traffic">Traffic Lights</Link>
+        </li>
       </ul>
     </div>
   );
