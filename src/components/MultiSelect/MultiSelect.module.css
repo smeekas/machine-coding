@@ -1,0 +1,51 @@
+.list {
+  position: absolute;
+  background-color: white;
+  width: inherit;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: 100%;
+}
+.list li:hover {
+  background-color: rgb(233, 233, 233);
+}
+.selected {
+  background-color: rgb(233, 233, 233);
+}
+.container {
+  display: flex;
+  position: relative;
+  width: 500px;
+}
+.chip {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.input {
+  outline: none;
+  background-color: inherit;
+  border: none;
+  font-size: medium;
+}
+
+.inputContainer {
+  width: 100%;
+  border: 1px solid black;
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.2rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.chip {
+  background-color: green;
+  /* position: absolute; */
+  color: white;
+  border-radius: 4rem;
+  padding: 0.1rem 1rem;
+  width: max-content;
+}

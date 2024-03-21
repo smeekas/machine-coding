@@ -18,6 +18,12 @@ function Home() {
         <li>
           <Link to="/tag">Tag User</Link>
         </li>
+        <li>
+          <Link to="/poll">Poll</Link>
+        </li>
+        <li>
+          <Link to="/multi-select">Multi select</Link>
+        </li>
       </ul>
     </div>
   );

@@ -5,6 +5,8 @@ import Home from "./pages/Home/Home";
 import Progress from "./pages/Progress/ProgressPage";
 import TrafficLightsPage from "./pages/TrafficLights/TrafficLightsPage";
 import TagUserPage from "./pages/TagUser/TagUserPage";
+import PollPage from "./pages/Poll/PollPage";
+import MultiSelectPage from "./pages/MultiSelect/MultiSelectPage";
 
 function App() {
   return (
@@ -15,6 +17,9 @@ function App() {
           <Route path="progress" element={<Progress />} />
           <Route path="traffic" element={<TrafficLightsPage />} />
           <Route path="tag" element={<TagUserPage />} />
+          <Route path="poll" element={<PollPage />} />
+          <Route path="multi-select" element={<MultiSelectPage />} />
+
           <Route index path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>
