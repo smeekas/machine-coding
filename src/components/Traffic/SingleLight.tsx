@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Traffic.module.css";
 type SingleLightProps = {
   color: string;
