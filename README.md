@@ -1,30 +1,20 @@
-# React + TypeScript + Vite
+# Machine coding Question using React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ✅ Progress Bar <br/>
+Tracking progress<br/>
 
-Currently, two official plugins are available:
+## ✅ Tag User  <br/>
+write @ to get list of user and tag them<br/>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✅ Poll widget  <br/>
+Give vote. similar to twitter<br/>
 
-## Expanding the ESLint configuration
+## ✅ Multi Select dropdown  <br/>
+Select multiple items and they will be present as chips in input.<br/>
+## ✅ Green Lights  <br/>
+Select lights one by one. after selecting all, lights will turn-off in reverse order of selected.<br/>
+## ✅ Traffic Light simulation  <br/>
+Configurable simulation of traffic lights
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
