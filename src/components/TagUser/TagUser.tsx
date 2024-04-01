@@ -48,16 +48,19 @@ function TagUser() {
   };
   const textToBeSearched = open !== null ? areaContent.slice(open + 1) : "";
   return (
-    <div>
-      <textarea
-        value={areaContent}
-        onChange={(e) => setAreaContent(e.target.value)}
-        onKeyDownCapture={onKeyDownHandler}
-      />
-      {open !== null && (
-        <ListOfUser onClick={onClickHandler} text={textToBeSearched} />
-      )}
-    </div>
+    <>
+      <div>
+        <textarea
+          value={areaContent}
+          onChange={(e) => setAreaContent(e.target.value)}
+          onKeyDownCapture={onKeyDownHandler}
+          placeholder="type @ to tag user"
+        />
+        {open !== null && (
+          <ListOfUser onClick={onClickHandler} text={textToBeSearched} />
+        )}
+      </div>
+    </>
   );
 }
 
