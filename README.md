@@ -15,6 +15,8 @@ Select multiple items and they will be present as chips in input.<br/>
 Select lights one by one. after selecting all, lights will turn-off in reverse order of selected.<br/>
 ## ✅ Traffic Light simulation  <br/>
 Configurable simulation of traffic lights
+## ✅ Selectable Grid  <br/>
+use mouse to select cells from the grid.
 
 
 

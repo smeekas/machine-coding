@@ -23,6 +23,9 @@ function Home() {
         <li>
           <Link to="/multi-select">Multi select</Link>
         </li>
+        <li>
+          <Link to="/selectable-grid">Selectable Grid</Link>
+        </li>
       </ul>
     </div>
   );
