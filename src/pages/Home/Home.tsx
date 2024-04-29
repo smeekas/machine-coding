@@ -26,6 +26,9 @@ function Home() {
         <li>
           <Link to="/selectable-grid">Selectable Grid</Link>
         </li>
+        <li>
+          <Link to="/image-slider">Image Slider</Link>
+        </li>
       </ul>
     </div>
   );
