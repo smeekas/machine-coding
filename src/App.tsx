@@ -9,6 +9,7 @@ import PollPage from "./pages/Poll/PollPage";
 import MultiSelectPage from "./pages/MultiSelect/MultiSelectPage";
 import SelectableGridPage from "./pages/SelectableGrid/SelectableGridPage";
 import ImageSliderPage from "./pages/ImageSlider/ImageSliderPage";
+import ImagePreviewPage from "./pages/ImagePreview/ImagePreviewPage";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="multi-select" element={<MultiSelectPage />} />
           <Route path="selectable-grid" element={<SelectableGridPage />} />
           <Route path="image-slider" element={<ImageSliderPage />} />
+          <Route path="image-preview" element={<ImagePreviewPage />} />
 
           <Route index path="/" element={<Home />} />
         </Routes>

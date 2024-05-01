@@ -29,6 +29,9 @@ function Home() {
         <li>
           <Link to="/image-slider">Image Slider</Link>
         </li>
+        <li>
+          <Link to="/image-preview">Image Preview</Link>
+        </li>
       </ul>
     </div>
   );
