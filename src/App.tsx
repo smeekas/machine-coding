@@ -10,6 +10,7 @@ import MultiSelectPage from "./pages/MultiSelect/MultiSelectPage";
 import SelectableGridPage from "./pages/SelectableGrid/SelectableGridPage";
 import ImageSliderPage from "./pages/ImageSlider/ImageSliderPage";
 import ImagePreviewPage from "./pages/ImagePreview/ImagePreviewPage";
+import AccordionPage from "./pages/Accordion/AccordionPage";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="selectable-grid" element={<SelectableGridPage />} />
           <Route path="image-slider" element={<ImageSliderPage />} />
           <Route path="image-preview" element={<ImagePreviewPage />} />
+          <Route path="accordion" element={<AccordionPage />} />
 
           <Route index path="/" element={<Home />} />
         </Routes>

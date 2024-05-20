@@ -1,0 +1,35 @@
+.hidden {
+  display: none;
+}
+.label {
+  border-bottom: 1px solid gray;
+  background-color: gainsboro;
+  cursor: pointer;
+}
+
+.noBorder {
+  border-bottom: none;
+}
+.label:focus {
+  background-color: rgb(175, 175, 175);
+}
+
+.container {
+  border-radius: 1rem;
+  display: block;
+  border: 1px solid grey;
+  width: 100%;
+  overflow: hidden;
+  text-align: left;
+}
+
+.label,
+.content {
+  padding: 1rem;
+}
+.content {
+  max-height: calc(100%-10px);
+}
+.transition {
+  transition: max-height 1.25s ease-in;
+}

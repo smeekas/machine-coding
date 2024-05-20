@@ -32,6 +32,10 @@ function Home() {
         <li>
           <Link to="/image-preview">Image Preview</Link>
         </li>
+
+        <li>
+          <Link to="/accordion">Accordion</Link>
+        </li>
       </ul>
     </div>
   );
