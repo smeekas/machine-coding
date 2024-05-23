@@ -11,6 +11,7 @@ import SelectableGridPage from "./pages/SelectableGrid/SelectableGridPage";
 import ImageSliderPage from "./pages/ImageSlider/ImageSliderPage";
 import ImagePreviewPage from "./pages/ImagePreview/ImagePreviewPage";
 import AccordionPage from "./pages/Accordion/AccordionPage";
+import TooltipPage from "./pages/Tooltip/TooltipPage";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="image-slider" element={<ImageSliderPage />} />
           <Route path="image-preview" element={<ImagePreviewPage />} />
           <Route path="accordion" element={<AccordionPage />} />
+          <Route path="tooltip" element={<TooltipPage />} />
 
           <Route index path="/" element={<Home />} />
         </Routes>

@@ -1,0 +1,10 @@
+.popover {
+  position: absolute;
+  /* width: 100px; */
+  padding: 0.5rem 1rem;
+  background-color: rgb(46, 46, 46);
+  color: white;
+  text-align: center;
+  z-index: 100000;
+  border-radius: 4px;
+}

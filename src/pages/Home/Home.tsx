@@ -36,6 +36,9 @@ function Home() {
         <li>
           <Link to="/accordion">Accordion</Link>
         </li>
+        <li>
+          <Link to="/tooltip">Tool Tip</Link>
+        </li>
       </ul>
     </div>
   );
