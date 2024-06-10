@@ -12,6 +12,7 @@ import ImageSliderPage from "./pages/ImageSlider/ImageSliderPage";
 import ImagePreviewPage from "./pages/ImagePreview/ImagePreviewPage";
 import AccordionPage from "./pages/Accordion/AccordionPage";
 import TooltipPage from "./pages/Tooltip/TooltipPage";
+import TabsPage from "./pages/Tabs/TabsPage";
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
           <Route path="image-preview" element={<ImagePreviewPage />} />
           <Route path="accordion" element={<AccordionPage />} />
           <Route path="tooltip" element={<TooltipPage />} />
-
+          <Route path="tabs" element={<TabsPage />} />
           <Route index path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>

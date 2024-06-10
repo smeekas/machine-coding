@@ -39,6 +39,9 @@ function Home() {
         <li>
           <Link to="/tooltip">Tool Tip</Link>
         </li>
+        <li>
+          <Link to="/tabs">Tabs</Link>
+        </li>
       </ul>
     </div>
   );
