@@ -28,6 +28,13 @@ function Tooltip({
   const onMouseEnter = useCallback(
     (e: MouseEvent) => {
       setIsEnabled(true);
+      if (ref.current) {
+        console.dir(ref.current);
+        setPos({
+          top: ref.current.offsetTop + ref.current.offsetHeight + 10,
+          left: ref.current.offsetLeft + ref.current.offsetWidth / 2,
+        });
+      }
       children.props.onMouseEnter?.(e);
     },
     [children]
@@ -95,7 +102,7 @@ function Tooltip({
     if (ref.current) {
       const rect = ref.current.getBoundingClientRect();
       setPos({
-        left: rect.left + rect.width / 2,
+        left: rect.left,
         top: rect.top + rect.height,
       });
     }
