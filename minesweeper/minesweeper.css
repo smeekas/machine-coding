@@ -1,0 +1,28 @@
+.cell {
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.144);
+}
+.cell:hover {
+  background-color: rgba(0, 128, 0, 0.158);
+}
+.row {
+  display: flex;
+}
+[data-status="hidden"] {
+  background-color: gray;
+}
+[data-status="number"] {
+  background-color: transparent;
+}
+[data-status="mine"] {
+  background-color: red;
+}
+[data-status="marked"] {
+  background-color: yellow;
+}
