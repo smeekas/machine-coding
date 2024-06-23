@@ -42,6 +42,9 @@ function Home() {
         <li>
           <Link to="/tabs">Tabs</Link>
         </li>
+        <li>
+          <Link to="/modal">modal</Link>
+        </li>
       </ul>
     </div>
   );
