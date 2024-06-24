@@ -45,6 +45,9 @@ function Home() {
         <li>
           <Link to="/modal">modal</Link>
         </li>
+        <li>
+          <Link to="/pagination">Pagination</Link>
+        </li>
       </ul>
     </div>
   );

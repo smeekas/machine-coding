@@ -14,6 +14,7 @@ import AccordionPage from "./pages/Accordion/AccordionPage";
 import TooltipPage from "./pages/Tooltip/TooltipPage";
 import TabsPage from "./pages/Tabs/TabsPage";
 import ModalPage from "./pages/Modal/ModalPage";
+import PaginationPage from "./pages/Pagination/PaginationPage";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="tooltip" element={<TooltipPage />} />
           <Route path="tabs" element={<TabsPage />} />
           <Route path="modal" element={<ModalPage />} />
+          <Route path="pagination" element={<PaginationPage />} />
           <Route index path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>
