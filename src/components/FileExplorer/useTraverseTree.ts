@@ -25,7 +25,7 @@ function useTraverseTree() {
           if (subTreeItem.id === id) return null;
           return removeNode(subTreeItem, id);
         })
-        .filter(Boolean);
+        .filter(Boolean) as ExplorerData[];
       return { ...tree, items: newItems };
     }
     return tree;
