@@ -48,6 +48,9 @@ function Home() {
         <li>
           <Link to="/pagination">Pagination</Link>
         </li>
+        <li>
+          <Link to="/file">File Explorer</Link>
+        </li>
       </ul>
     </div>
   );

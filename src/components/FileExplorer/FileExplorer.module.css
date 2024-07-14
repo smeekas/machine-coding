@@ -1,0 +1,27 @@
+.container {
+  text-align: left;
+  min-width: 200px;
+  align-self: self-start;
+}
+
+.file,
+.folder,
+input {
+  transform: translateX(8px);
+}
+
+.name:hover {
+  background-color: rgb(185, 185, 185);
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.btnGroup {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+}
