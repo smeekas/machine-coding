@@ -51,6 +51,9 @@ function Home() {
         <li>
           <Link to="/file">File Explorer</Link>
         </li>
+        <li>
+          <Link to="/walkthrough">Walkthrough</Link>
+        </li>
       </ul>
     </div>
   );
