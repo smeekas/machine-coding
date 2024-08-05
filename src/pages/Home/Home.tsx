@@ -54,6 +54,9 @@ function Home() {
         <li>
           <Link to="/walkthrough">Walkthrough</Link>
         </li>
+        <li>
+          <Link to="/carousel">Carousel</Link>
+        </li>
       </ul>
     </div>
   );

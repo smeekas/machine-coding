@@ -17,6 +17,7 @@ import ModalPage from "./pages/Modal/ModalPage";
 import PaginationPage from "./pages/Pagination/PaginationPage";
 import FileExplorerPage from "./pages/FileExplorer/FileExplorerPage";
 import WalkthroughPage from "./pages/Walkthrough/WalkthroughPage";
+import CarouselPage from "./pages/Carousel/CarouselPage";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
           <Route path="pagination" element={<PaginationPage />} />
           <Route path="file" element={<FileExplorerPage />} />
           <Route path="walkthrough" element={<WalkthroughPage />} />
+          <Route path="carousel" element={<CarouselPage />} />
           <Route index path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>

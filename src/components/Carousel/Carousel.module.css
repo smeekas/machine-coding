@@ -1,0 +1,47 @@
+.carouselImages {
+  display: flex;
+  overflow-x: scroll;
+  width: 600px;
+  scroll-snap-type: x mandatory;
+  /* scroll-snap-type: x mandatory;  FOR MOBILE  IF WE ENABLE SWIPING   */
+}
+.carouselImages::-webkit-scrollbar {
+  display: none;
+}
+.carousel {
+  position: relative;
+}
+
+.carouselBtn {
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+.left {
+  left: 0;
+}
+.right {
+  right: 0;
+}
+.carouselImage {
+  min-width: 100%;
+  scroll-snap-align: center;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.dot {
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: transparent;
+  width: 10px;
+  height: 10px;
+}
+.activeDot {
+  background-color: black;
+}
